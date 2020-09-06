@@ -9,13 +9,12 @@ class Ruliweb:
     
     def __init__(self):
         self.libs = MyLibrary()
-        self.sess = requests.Session()
 
     def login(self):
         url = 'https://user.ruliweb.com/member/login_proc'
         acct = pd.read_csv('account.scrt')
         data = {'user_id' : acct['ID'], 'user_pw' : acct['PW']}
-        self.sess.post(url, data=data)
+        self.libs.sess.post(url, data=data)
     
     def setBaseUrl(self, url):
         self.base_url = url
