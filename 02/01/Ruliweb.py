@@ -1,14 +1,14 @@
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
-from package.CrawlingPackage import CrawlingPackage
+from package.MyLibrary import MyLibrary
 import pandas as pd
 import requests
 
 class Ruliweb:
     
     def __init__(self):
-        self.libs = CrawlingPackage()
+        self.libs = MyLibrary()
         self.sess = requests.Session()
 
     def login(self):

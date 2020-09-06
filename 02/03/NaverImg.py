@@ -1,13 +1,13 @@
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
-from package.CrawlingPackage import CrawlingPackage
+from package.MyLibrary import MyLibrary
 
 class NaverImg:
     
     def __init__(self):
         self.base_url = 'https://search.naver.com/search.naver?where=image&sm=tab_jum&query='
-        self.libs = CrawlingPackage()
+        self.libs = MyLibrary()
     
     def setKeyword(self, keyword):
         self.keyword = keyword

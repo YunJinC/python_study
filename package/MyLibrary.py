@@ -3,7 +3,7 @@ import pandas as pd
 import os
 from bs4 import BeautifulSoup
 
-class CrawlingPackage():
+class MyLibrary():
     
     def url2Html(self, url):
         res = requests.get(url)
