@@ -21,14 +21,13 @@ class MyLibrary():
             print("Failed to create directory!!!!!")
             raise
 
-
     def saveImg(self, url, path, fileName):
         self.makeDir(path)
         res = requests.get(url)
         f = open(path+"/"+fileName, "wb")
         f.write(res.content)
         f.close()
-
+    
 
 if __name__ == "__main__":
     crawler = MyLibrary()
