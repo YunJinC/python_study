@@ -4,9 +4,12 @@ import os
 from bs4 import BeautifulSoup
 
 class MyLibrary():
+
+    def __init__(self):
+        self.sess = requests.Session()
     
     def url2Html(self, url):
-        res = requests.get(url)
+        res = self.sess.get(url)
         soup = BeautifulSoup(res.text, 'html.parser')
         return soup
 
@@ -28,4 +31,4 @@ class MyLibrary():
 
 
 if __name__ == "__main__":
-    crawler = CrawlingPackage()
+    crawler = MyLibrary()
