@@ -18,7 +18,7 @@ class MyLibrary():
         try:
             if not(os.path.isdir(path)):
                 os.makedirs(os.path.join(path))
-        except OSError as e:
+        except:
             print("Failed to create directory!!!!!")
             raise
 
@@ -38,7 +38,7 @@ class MyLibrary():
                 'mysql' : 'mysql+mysqldb',            
             }
 
-            params = pd.read_json('package//dbEngine.scrt', typ='series')
+            params = pd.read_json('package//dbConfig.scrt', typ='series')
 
             if user != None : params['user'] = user
             if passwd != None : params['pass'] = passwd
