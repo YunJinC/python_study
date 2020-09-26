@@ -46,7 +46,7 @@ class MyLibrary():
             if port != None : params['port'] = port
             if schema != None : params['schema'] = schema
 
-            self.engine = create_engine(toolParam['tool'] + '://{user}:{pass}@{host}:{port}/{schema}'.format(**params), echo=False)
+            self.engine = create_engine(toolParam[tool] + '://{user}:{pass}@{host}:{port}/{schema}?charset=utf8mb4'.format(**params), echo=False)
     
 
 if __name__ == "__main__":
