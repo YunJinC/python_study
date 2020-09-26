@@ -1,3 +1,4 @@
 *.scrt
 .vscode
 *.db
+*.xlsx
